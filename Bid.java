@@ -20,8 +20,8 @@ public class Bid
      */
     public Bid(Person bidder, long value)
     {
-        this.bidder = bidder;
-        this.value = value;
+        Lot selectedLot = getLot(lotNumber);
+        if(selectedLot
     }
 
     /**
@@ -39,4 +39,5 @@ public class Bid
     {
         return value;
     }
+    
 }

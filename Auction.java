@@ -100,5 +100,18 @@ public class Auction
             return null;
         }
     }
+    
+    public void close(){
+        for (Lot aLot : listOfLLots){
+            Bid highest = aLot.getHighestBid();
+            if (highest == null){
+                System.out.println("no bidder for this lot");
+            } else{
+                System.out.println("The bidder is" + highest.getBidder().getName());
+                System.out.println("The value is" + highest.getValue());
+            }
+            }
+        }
+    }
 }
 
